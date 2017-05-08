@@ -8,14 +8,14 @@ class Nomina{
     private:
         vector<Empleado> datosEmpresa;
     public:
-        Nomina();
+        Nomina(vector<Empleado> empleados);
         virtual ~Nomina();
 
-        Empleado getDatosEmpresa();
-        void setDatosEmpresa(Empleado emp);
-        void agregarInformacion(Empleado * emp)
-        double totalNomina();
-        double promedioNomina();
+        vector<Empleado> getDatosEmpresa();
+        void setDatosEmpresa(vector<Empleado> emp);
+        void agregarInformacion(Empleado emp);
+        void totalNomina();
+        void promedioNomina();
 };
 
 #endif // NOMINA_H

@@ -1,9 +1,8 @@
 #ifndef EMPLEADO_H
 #define EMPLEADO_H
 
-#include <string>
-
-using namespace std::string;
+#include <iostream>
+using namespace std;
 
 class Empleado{
     private:
@@ -22,4 +21,4 @@ class Empleado{
         void setSalario(double sal);
 };
 
-#endif
+#endif // EMPLEADO_H
