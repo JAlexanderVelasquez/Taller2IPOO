@@ -17,21 +17,24 @@ void Nomina::setDatosEmpresa(vector<Empleado> emp){
 
 void Nomina::agregarInformacion(Empleado emp){
     datosEmpresa.push_back(emp);
+    for(int i=0; i<datosEmpresa.size(); i++){
+        cout << datosEmpresa[i].getNombre() << endl;
+    }
 }
 
-void Nomina::totalNomina(){
-    double totalSalarios;
+double Nomina::totalNomina(){
+    double totalSalarios=0;
     for(int i=0; i<datosEmpresa.size(); i++){
         totalSalarios += datosEmpresa[i].getSalario();
     }
-    cout << totalSalarios << endl;
+    return totalSalarios;
 }
 
-void Nomina::promedioNomina(){
-    double totalSalarios;
+double Nomina::promedioNomina(){
+    double totalSalario=0;
     for(int i=0; i<datosEmpresa.size(); i++){
-        totalSalarios = datosEmpresa[i].getSalario();
+        totalSalario += datosEmpresa[i].getSalario();
     }
-    totalSalarios/datosEmpresa.size();
-    cout << totalSalarios << endl;
+    totalSalario /= datosEmpresa.size();
+    return totalSalario;
 }

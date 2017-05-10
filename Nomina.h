@@ -3,6 +3,9 @@
 
 #include "Empleado.h"
 #include <vector>
+#include <iostream>
+
+using namespace std;
 
 class Nomina{
     private:
@@ -14,8 +17,8 @@ class Nomina{
         vector<Empleado> getDatosEmpresa();
         void setDatosEmpresa(vector<Empleado> emp);
         void agregarInformacion(Empleado emp);
-        void totalNomina();
-        void promedioNomina();
+        double totalNomina();
+        double promedioNomina();
 };
 
 #endif // NOMINA_H

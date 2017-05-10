@@ -22,6 +22,7 @@ int main(){
     empleadosEmpresa.promedioNomina();
 
     Empleado empleado4("114", "Manco", 300);
+    //Se verifica que haya sido agregado
     empleadosEmpresa.agregarInformacion(empleado4);
 
 
@@ -42,23 +43,20 @@ int main(){
 		cout<<"Ingrese su eleccion:"<<endl;
 		cin>>eleccion;
 
-        if(eleccion == 1){/*
-            cout<<"Ingrese el nombre del archivo"<<endl;
-			cin>>nombreArchivo1;*/
-
-			ofstream opcion1("TotalNomina.txt");
-			opcion1<<"*******************************"<<endl;
-			opcion1<<"*  BIENVENIDO A UVNOMINA      *"<<endl;
-			opcion1<<"*******************************"<<endl;
-			opcion1<<"*Total salario: "<< empleadosEmpresa.totalNomina() <<"      *"<<endl;
-			opcion1<<"*******************************"<<endl;
-			opcion1.close();
+        if(eleccion == 1){
+			ofstream texto1("total salario");
+			texto1<<"*******************************"<<endl;
+			texto1<<"*  BIENVENIDO A UVNOMINA      *"<<endl;
+			texto1<<"*******************************"<<endl;
+			texto1<<"*Total salario: "<< empleadosEmpresa.totalNomina() <<"          *"<<endl;
+			texto1<<"*******************************"<<endl;
+			texto1.close();
 
 			cout<<endl;
 			cout<<"*******************************"<<endl;
 			cout<<"*  BIENVENIDO A UVNOMINA      *"<<endl;
 			cout<<"*******************************"<<endl;
-			cout<<"*Total salario:"<<empleadosEmpresa.totalNomina()<<"          *"<<endl;
+			cout<<"*Total salario:"<<empleadosEmpresa.totalNomina()<<"           *"<<endl;
 			cout<<"*******************************"<<endl;
 			cout<<endl;
 
@@ -69,11 +67,8 @@ int main(){
 			cout<<endl;
         }
 
-        else if(eleccion == 2){/*
-			cout<<"Ingrese el nombre del archivo:"<<endl;
-			cin>>nombreArchivo2;*/
-
-            ofstream opcion2("PromedioNomina.txt");
+        else if(eleccion == 2){
+            ofstream opcion2("promedio nomina");
 
             opcion2<<endl;
 			opcion2<<"*******************************"<<endl;
@@ -98,5 +93,8 @@ int main(){
 			cout<<"***************************************"<<endl;
 			cout<<endl;
 
+		}
+		else{
+			cout << "Opcion no valida" << endl;
 		}
 }
